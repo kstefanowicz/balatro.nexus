@@ -12,6 +12,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=VT323&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
@@ -23,38 +30,51 @@
         <h1>Balatro Nexus</h1>
     </header>
     <div class="versus-container container">
-        <h2>Versus Generator</h2>
+        <h2>Heads-up Balatro</h2>
         <div class="ruleset container">
+            <p>Prove your superior jokering skills by 1v1'ing your opponent!</p>
             <p>
-                Both players play using the same seed, deck, and stake; it's recommended to use a profile with everything unlocked. The winner is the player who finishes
-                 their run with the <em>highest Ante</em>, with tiebreakers being decided by <em>the highest Best Hand</em>.
+                Both players play using the same seed, deck, and stake; it's recommended to use a profile with
+                everything unlocked.
+                The winner is the player who finishes their run with the <em>highest Ante</em>, with tiebreakers being
+                decided by the <em>highest Best Hand</em>.
             </p>
         </div>
-        <div class="seed-gen container">
+        <div class="seed-gen my-10 container">
             <h3>Seed</h3>
-            <div class="seed-display container">
-                <div class="container" id="seed-display"></div>
-                <button class="btn btn-primary text-jusitfy" id="seed-button">Reseed</button>
+            <div class="seed-container container">
+                <div class="row">
+                    <div class="col-sm-2 bg-display border border-radius rounded" id="seed-display"></div>
+                    <button class="col-sm-1 btn btn-primary ml-20px text-jusitfy" id="seed-button">Reseed</button>
+                </div>
             </div>
         </div>
-        <div class="deck-gen container">
+        <div class="deck-container my-10 container">
             <h3>Deck</h3>
             <div class="deck-display container">
-                <div class="container" id="deck-display"></div>
-                <button class="btn btn-primary text-jusitfy" id="deck-button">Randomize Deck</button>
+                <div class="row">
+                    <div class="col col-sm-3 pl-2 bg-display border border-radius rounded" id="deck-display"></div>
+                    <button class="col col-sm-2  btn btn-primary text-jusitfy" id="deck-button">Randomize Deck</button>
+                </div>
             </div>
         </div>
-        <div class="stake-gen container">
+        <div class="stake-gen my-10 container">
             <h3>Stake</h3>
             <div class="stake-display container">
-                <div class="container" id="stake-display"></div>
-                <button class="btn btn-primary text-jusitfy" id="stake-button">Randomize Stake</button>
+                <div class="row">
+                    <div class="col col-sm-3 bg-display border border-radius rounded" id="stake-display"></div>
+                    <button class="col col-sm-2 btn btn-primary text-jusitfy" id="stake-button">Randomize Stake</button>
+                </div>
             </div>
         </div>
 
 
     </div>
     </div>
+
+    <footer class="container text-center">
+        <h6>balatro.nexus is not affiliated with Balatro, LocalThunk, or Playstack</h6>
+    </footer>
 </body>
 
 </html>

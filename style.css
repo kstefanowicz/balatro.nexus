@@ -1,3 +1,44 @@
 em {
     font-weight: bold;
 }
+
+html {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+h1 {
+    font-family: 'Righteous', sans-serif;
+    font-size: 100px
+}
+
+.bg-display {
+    background-color: rgb(122, 122, 122);
+}
+
+#seed-display {
+    font-family: 'VT323', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: white
+    
+}
+
+#deck-display {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: white
+}
+
+#stake-display {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: white
+}
+
+footer {
+    position: absolute;
+    height: 30px;
+    bottom: 10px;
+}
