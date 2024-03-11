@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balatro Nexus</title>
+
+    <!-- Import Bootsrap and jQuery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+    <header class="container text-center">
+        <h1>Balatro Nexus</h1>
+    </header>
+    <div class="versus-container container">
+        <h2>Versus Generator</h2>
+        <div class="ruleset container">
+            <p>
+                Both players play using the same seed, deck, and stake; it's recommended to use a profile with everything unlocked. The winner is the player who finishes
+                 their run with the <em>highest Ante</em>, with tiebreakers being decided by <em>the highest Best Hand</em>.
+            </p>
+        </div>
+        <div class="seed-gen container">
+            <h3>Seed</h3>
+            <div class="seed-display container">
+                <div class="container" id="seed-display"></div>
+                <button class="btn btn-primary text-jusitfy" id="seed-button">Reseed</button>
+            </div>
+        </div>
+        <div class="deck-gen container">
+            <h3>Deck</h3>
+            <div class="deck-display container">
+                <div class="container" id="deck-display"></div>
+                <button class="btn btn-primary text-jusitfy" id="deck-button">Randomize Deck</button>
+            </div>
+        </div>
+        <div class="stake-gen container">
+            <h3>Stake</h3>
+            <div class="stake-display container">
+                <div class="container" id="stake-display"></div>
+                <button class="btn btn-primary text-jusitfy" id="stake-button">Randomize Stake</button>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+</html>

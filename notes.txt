@@ -1,0 +1,29 @@
+Red Deck	+1 discard every round	None - this is the starting deck.
+Blue Deck	Blue Deck	+1 hand every round	Discover at least 20 items from your collection.
+Yellow Deck	Yellow Deck	Start with an extra $10	Discover at least 50 items from your your collection.
+Green Deck	Green Deck	You don't earn interest. Instead, gain $2 per remaining Hand and $1 per remaining Discard at the end of each round.	Discover at least 75 items from your your collection.
+Black Deck	Black Deck	+1 Joker slot, but -1 hand every round	Discover at least 100 items from your your collection.
+Magic Deck	Magic Deck	Start run with the Crystal Ball voucher and 2 copies of The Fool	Win a run with the Red Deck on any difficulty.
+Nebula Deck	Nebula Deck	Start run with the Telescope voucher but -1 consumable slot.	Win a run with the Blue Deck on any difficulty.
+Ghost Deck	Ghost Deck	Spectral Cards may appear individually in the shop, and you start with a Hex card.	Win a run with the Yellow Deck on any difficulty.
+Abandoned Deck	Abandoned Deck	This deck is smaller than normal as it has no Face Cards in it.	Win a run with the Green Deck on any difficulty.
+Checkered Deck	Checkered Deck	Start run with 26 Spades and 26 Hearts in deck, and no Clubs or Diamonds.	Win a run with the Black Deck on any difficulty.
+Zodiac Deck	Zodiac Deck	Start the run with Tarot Merchant, Planet Merchant, and Overstock vouchers.	Win a run with any deck on the Red Stake difficulty or harder.
+Painted Deck	Painted Deck	+2 Hand Size, -1 Joker Slot.	Win a run with any deck on the Green Stake difficulty or harder.
+Anaglyph Deck	Anaglyph Deck	After defeating each Boss Blind, gain a Double Tag	Win a run with any deck on the Black Stake difficulty or harder.
+Plasma Deck	Plasma Deck	Balance Chips and Mult when calculating score for played hand. X2 base Blind size. (Your chips and mult become averaged before scoring)	Win a run with any deck on the Blue Stake difficulty or harder.
+Erratic Deck	Erratic Deck	All Ranks and Suits in deck are randomized	Win a run with any deck on the Orange Stake difficulty or harder.
+Challenge deck	Challenge Deck	This back is used for the deck used during Challenge runs.	Challenge mode is unlocked by winning a regular run with five different decks.
+
+["Red Deck", "Blue Deck","Yellow Deck","Green Deck","Black Deck","Magic Deck","Nebula Deck","Ghost Deck","Abandoned Deck","Checkered Deck","Zodiac Deck","Painted Deck","Anaglyph Deck","Plasma Deck","Erratic Deck","Challenge Deck"]
+
+White Stake	Base difficulty
+Red stake	Red Stake	Small Blind gives no reward money
+Green stake	Green Stake	Required score scales faster for each Ante
+Black stake	Black Stake	Shop can have Eternal Jokers (Can't be sold or destroyed) Note: Each Joker has a 30% chance of being Eternal.
+Blue stake	Blue Stake	-1 Discard
+Purple stake	Purple Stake	Required score scales faster for each Ante
+Orange stake	Orange Stake	Booster Packs cost $1 more per Ante
+Gold stake	Gold Stake	-1 hand size
+
+["White Stake","Red Stake","Green Stake","Black Stake","Blue Stake,","Purple Stake","Orange Stake","Gold Stake"]
