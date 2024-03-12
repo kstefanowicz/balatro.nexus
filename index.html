@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balatro Nexus</title>
 
-    <!-- Import Bootsrap and jQuery -->
+    <!-- Import Bootsrap, jQuery, Popper.js -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    
 
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,61 +20,101 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 
 
 </head>
 
 <body>
-    <header class="container text-center">
-        <h1>Balatro Nexus</h1>
-    </header>
-    <div class="versus-container container">
-        <h2>Heads-up Balatro</h2>
-        <div class="ruleset container">
-            <p>Prove your superior jokering skills by 1v1'ing your opponent!</p>
-            <p>
-                Both players play using the same seed, deck, and stake; it's recommended to use a profile with
-                everything unlocked.
-                The winner is the player who finishes their run with the <em>highest Ante</em>, with tiebreakers being
-                decided by the <em>highest Best Hand</em>.
-            </p>
-        </div>
-        <div class="seed-gen my-10 container">
-            <h3>Seed</h3>
-            <div class="seed-container container">
-                <div class="row">
-                    <div class="col-sm-2 bg-display border border-radius rounded" id="seed-display"></div>
-                    <button class="col-sm-1 btn btn-primary ml-20px text-jusitfy" id="seed-button">Reseed</button>
+    <div class="container" id="content-root">
+        <header class="container text-center">
+            <h1>Balatro Nexus</h1>
+        </header>
+        <div class="container" id="versus-container">
+            <h2>Heads-up Balatro</h2>
+            <div class="ruleset container">
+                <p>Prove your superior jokering skills by 1v1'ing your opponent!</p>
+                <p>
+                    Both players play using the same seed, deck, and stake; it's recommended to use a profile with
+                    everything unlocked.
+                    The winner is the player who finishes their run with the <em>highest Ante</em>, with tiebreakers
+                    being
+                    decided by the <em>highest Best Hand</em>.
+                </p>
+            </div>
+            <div class="row d-flex flex-row">
+            <div class="seed-gen my-10 col">
+                <h3>Seed</h3>
+                <div class="seed-container container">
+                    <div class="row">
+                        <div class="col-sm-2 bg-display border border-radius rounded w-auto" id="seed-display"></div>
+                        <button class="col-sm-1 btn btn-primary ml-20px text-jusitfy w-auto" id="seed-button">Reseed</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="deck-container my-10 container">
-            <h3>Deck</h3>
-            <div class="deck-display container">
-                <div class="row">
-                    <div class="col col-sm-3 pl-2 bg-display border border-radius rounded" id="deck-display"></div>
-                    <button class="col col-sm-2  btn btn-primary text-jusitfy" id="deck-button">Randomize Deck</button>
+            <div class="deck-container my-10 col">
+                <h3>Deck</h3>
+                <div class="deck-display container">
+                    <div class="row">
+                        <div class="dropdown col">
+                            <button class="btn btn-secondary dropdown-toggle w-auto" type="button" id="deck-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Deck</button>
+                            <div class="dropdown-menu" aria-labelledby="deck-dropdown">
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Red_Deck.png" height="16px" width="10px" alt=""> Red Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Blue_Deck.png" height="16px" width="10px" alt=""> Blue Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Yellow_Deck.png" height="16px" width="10px" alt=""> Yellow Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Green_Deck.png" height="16px" width="10px" alt=""> Green Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Black_Deck.png" height="16px" width="10px" alt=""> Black Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Magic_Deck.png" height="16px" width="10px" alt=""> Magic Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Nebula_Deck.png" height="16px" width="10px" alt=""> Nebula Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Ghost_Deck.png" height="16px" width="10px" alt=""> Ghost Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Abandoned_Deck.png" height="16px" width="10px" alt=""> Abandoned Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Checkered_Deck.png" height="16px" width="10px" alt=""> Checkered Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Zodiac_Deck.png" height="16px" width="10px" alt=""> Zodiac Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Painted_Deck.png" height="16px" width="10px" alt=""> Painted Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Anaglyph_Deck.png" height="16px" width="10px" alt=""> Anaglyph Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Plasma_Deck.png" height="16px" width="10px" alt=""> Plasma Deck</a>
+                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Erratic_Deck.png" height="16px" width="10px" alt=""> Erratic Deck</a>
+                            </div>
+                        </div>
+                        <div class="col col-sm-3 pl-2 bg-display border border-radius rounded w-auto" id="deck-display"></div>
+                        <button class="col col-sm-2  btn btn-primary text-jusitfy w-auto" id="deck-button">Randomize
+                            Deck</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="stake-gen my-10 container">
-            <h3>Stake</h3>
-            <div class="stake-display container">
-                <div class="row">
-                    <div class="col col-sm-3 bg-display border border-radius rounded" id="stake-display"></div>
-                    <button class="col col-sm-2 btn btn-primary text-jusitfy" id="stake-button">Randomize Stake</button>
+            <div class="stake-gen my-10 col">
+                <h3>Stake</h3>
+                <div class="stake-display container">
+                    <div class="row">
+                        <div class="col col-sm-3 bg-display border border-radius rounded w-auto" id="stake-display"></div>
+                        <button class="col col-sm-2 btn btn-primary text-jusitfy w-auto" id="stake-button">Randomize
+                            Stake</button>
+                    </div>
                 </div>
             </div>
         </div>
 
 
+        </div>
+        <div class="container" id="seedbank-container">
+            <h2>Seed Bank</h2>
+            
+        </div>
     </div>
-    </div>
 
-    <footer class="container text-center">
+    <footer class="container text-center fixed-bottom">
         <h6>balatro.nexus is not affiliated with Balatro, LocalThunk, or Playstack</h6>
+        <h6>Font by <a href="https://managore.itch.io/">Daniel Linssen</a></h6>
     </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+        
+    <script src="script.js"></script>
 </body>
 
 </html>

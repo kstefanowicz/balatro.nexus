@@ -1,9 +1,22 @@
-em {
-    font-weight: bold;
+@font-face {
+    font-family: 'm6x11';
+    src: url(src/font/m6x11-BV674e_g.ttf);
 }
 
 html {
-    font-family: "Roboto Condensed", sans-serif;
+    
+}
+
+body {
+    font-family: 'm6x11', sans-serif;
+    font-size: 18px;
+    background-image: url('src/img/background-static.png');
+    color: white;
+}
+
+
+#content-root {
+    background-color: rgba(128, 128, 128, 0.7);
 }
 
 h1 {
@@ -11,12 +24,17 @@ h1 {
     font-size: 100px
 }
 
+em {
+    font-weight: bold;
+}
+
 .bg-display {
     background-color: rgb(122, 122, 122);
 }
 
 #seed-display {
-    font-family: 'VT323', sans-serif;
+    /* font-family: 'VT323', sans-serif; */
+    font-family: 'm6x11', monospace;
     font-weight: bold;
     font-size: 40px;
     color: white
@@ -24,21 +42,18 @@ h1 {
 }
 
 #deck-display {
-    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'm6x11', sans-serif;
     font-weight: bold;
     font-size: 32px;
     color: white
 }
 
 #stake-display {
-    font-family: 'Pixelify Sans', sans-serif;
+    /* font-family: 'Pixelify Sans', sans-serif; */
     font-weight: bold;
     font-size: 32px;
     color: white
 }
 
 footer {
-    position: absolute;
-    height: 30px;
-    bottom: 10px;
 }
