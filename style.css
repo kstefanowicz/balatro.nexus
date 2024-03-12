@@ -17,6 +17,11 @@ body {
     border-radius: 3em
 }
 
+#deck-image {
+    height: auto;
+    width: 160px
+}
+
 
 #content-root {
     background-color: rgba(128, 128, 128, 0.7);

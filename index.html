@@ -43,52 +43,62 @@
                 </p>
             </div>
             <div class="row d-flex flex-row">
-            <div class="seed-gen my-10 col">
-                <h3>Seed</h3>
-                <div class="seed-container container">
-                    <div class="row">
-                        <div class="col-sm-2 bg-display border border-radius rounded w-auto seed-copy" id="seed-display"></div>
-                        <button class="col-sm-1 btn btn-primary ml-20px text-jusitfy w-auto" id="seed-button">Reseed</button>
+                <div class="seed-gen col">
+                    <h3>Seed</h3>
+                    <div class="seed-container container">
+                        <div class="row">
+                            <div class="col-sm-2 bg-display border border-radius rounded w-auto seed-copy" id="seed-display"></div>
+                            <button class="col-sm-1 btn btn-primary ml-20px text-jusitfy w-auto" id="seed-button">Reseed</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="deck-container my-10 col">
-                <h3>Deck</h3>
-                <div class="deck-display container">
-                    <div class="row">
-                        <div class="dropdown col">
-                            <button class="btn btn-secondary dropdown-toggle w-auto" type="button" id="deck-dropdown"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Deck</button>
-                            <div class="dropdown-menu" aria-labelledby="deck-dropdown">
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Red_Deck.png" height="16px" width="10px" alt=""> Red Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Blue_Deck.png" height="16px" width="10px" alt=""> Blue Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Yellow_Deck.png" height="16px" width="10px" alt=""> Yellow Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Green_Deck.png" height="16px" width="10px" alt=""> Green Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Black_Deck.png" height="16px" width="10px" alt=""> Black Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Magic_Deck.png" height="16px" width="10px" alt=""> Magic Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Nebula_Deck.png" height="16px" width="10px" alt=""> Nebula Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Ghost_Deck.png" height="16px" width="10px" alt=""> Ghost Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Abandoned_Deck.png" height="16px" width="10px" alt=""> Abandoned Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Checkered_Deck.png" height="16px" width="10px" alt=""> Checkered Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Zodiac_Deck.png" height="16px" width="10px" alt=""> Zodiac Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Painted_Deck.png" height="16px" width="10px" alt=""> Painted Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Anaglyph_Deck.png" height="16px" width="10px" alt=""> Anaglyph Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Plasma_Deck.png" height="16px" width="10px" alt=""> Plasma Deck</a>
-                                <a class="dropdown-item" href="#"><img class src="src/img/decks/Erratic_Deck.png" height="16px" width="10px" alt=""> Erratic Deck</a>
+                <div class="deck-container col">
+                    <h3>Deck</h3>
+                    <div class="deck-display container">
+                        <div class="row">
+                            <div class="col">
+                                <img src="#" id="deck-image">
+                            </div>
+                        
+                        <div class="col">
+                            <div class="container deckSidePanel">
+                                <div class="row justify-content">
+                                    <div class="col bg-display border border-radius rounded w-auto h-auto text-center"
+                                        id="deck-display"></div>
+                                </div>       
+                                <div class="dropdown row w-auto">
+                                    <button class="btn btn-primary col dropdown-toggle w-auto" type="button" id="deck-dropdown"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Deck</button>
+                                    <div class="dropdown-menu row" aria-labelledby="deck-dropdown">
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Red_Deck.png" height="16px" width="10px" alt="">Red Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Blue_Deck.png" height="16px" width="10px" alt="">Blue Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Yellow_Deck.png" height="16px" width="10px" alt="">Yellow Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Green_Deck.png" height="16px" width="10px" alt="">Green Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Black_Deck.png" height="16px" width="10px" alt="">Black Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Magic_Deck.png" height="16px" width="10px" alt="">Magic Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Nebula_Deck.png" height="16px" width="10px" alt="">Nebula Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Ghost_Deck.png" height="16px" width="10px" alt="">Ghost Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Abandoned_Deck.png" height="16px" width="10px" alt="">Abandoned Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Checkered_Deck.png" height="16px" width="10px" alt="">Checkered Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Zodiac_Deck.png" height="16px" width="10px" alt="">Zodiac Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Painted_Deck.png" height="16px" width="10px" alt="">Painted Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Anaglyph_Deck.png" height="16px" width="10px" alt="">Anaglyph Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Plasma_Deck.png" height="16px" width="10px" alt="">Plasma Deck</a>
+                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Erratic_Deck.png" height="16px" width="10px" alt="">Erratic Deck</a>
+                                </div>
+                                <div class="row">
+                                    <button class="" btn btn-danger col text-jusitfy h-auto w-auto" id="deck-button">Randomize Deck</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col col-sm-3 pl-2 bg-display border border-radius rounded w-auto" id="deck-display"></div>
-                        <button class="col col-sm-2  btn btn-primary text-jusitfy w-auto" id="deck-button">Randomize
-                            Deck</button>
                     </div>
                 </div>
-            </div>
-            <div class="stake-gen my-10 col">
+            <div class="stake-gen col">
                 <h3>Stake</h3>
                 <div class="stake-display container">
                     <div class="row">
-                        <div class="col col-sm-3 bg-display border border-radius rounded w-auto" id="stake-display"></div>
-                        <button class="col col-sm-2 btn btn-primary text-jusitfy w-auto" id="stake-button">Randomize
+                        <div class="col bg-display border border-radius rounded w-auto" id="stake-display"></div>
+                        <button class="col btn btn-primary text-jusitfy w-auto" id="stake-button">Randomize
                             Stake</button>
                     </div>
                 </div>
@@ -98,7 +108,7 @@
 
         </div>
         <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#seedbank-container" ><h2>Seed Bank</h2></button>
-        <div class="container collapse card card-body bg-secondary my-2" id="seedbank-container">
+        <div class="container collapse show card card-body bg-secondary" id="seedbank-container">
             <p>A collection of <em>Power Seeds</em> - Balatro seeds with particularly strong starts.</p>
             <table class="table table-dark table-hover w-auto">
                 <thead>

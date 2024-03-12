@@ -8,22 +8,24 @@ $(document).ready(function () {
     
     let $stakeDisplay  = $('#stake-display')
     let $stakeButton  = $('#stake-button')
+    
+    let $deckImageDisplay = $('#deck-image')
 
 
     $seedButton.on('click', function(){
-        newSeed($seedDisplay)
+        displayNewRandomSeed($seedDisplay)
     })
-    newSeed($seedDisplay)
+    displayNewRandomSeed($seedDisplay)
 
     $deckButton.on('click', function(){
-        newDeck($deckDisplay, 16)
+        displayNewRandomDeck($deckDisplay, $deckImageDisplay, 16)
     })
-    newDeck($deckDisplay)
+    displayNewRandomDeck($deckDisplay,$deckImageDisplay)
 
     $stakeButton.on('click', function(){
-        newStake($stakeDisplay, 7)
+        displayNewRandomStake($stakeDisplay, 7)
     })
-    newStake($stakeDisplay)
+    displayNewRandomStake($stakeDisplay)
 
 
     let $seedCopies = $('.seed-copy');
@@ -49,23 +51,38 @@ $(document).ready(function () {
         })
     })
 
+    let $deckSelections = $('.deck-selection')
+    $deckSelections.on('click',function(){
+        $deckDisplay.text($(this).text())
+        $deckImageDisplay.attr('src',`src/img/decks/${toImgFileName($(this).text())}`)
+    })
+
 
 })
+
 
 function toClipboard(text){
     navigator.clipboard.writeText(text)
 
 }
 
-function newSeed(display){
+function toImgFileName(deckName){    
+    let outName = (deckName.replace(' ','_'))
+    outName = outName + '.png'
+    return outName.replace(/ /g,'').replace('\n','')
+}
+
+function displayNewRandomSeed(display){
     display.text(generateSeed())
 }
 
-function newDeck(display, num=5){
-    display.text(generateDeck(num))
+function displayNewRandomDeck(displayText, displayImg, num=5){
+    selection = generateDeck(num)
+    displayText.text(selection)
+    displayImg.attr('src',`src/img/decks/${toImgFileName(selection)}`)
 }
 
-function newStake(display, num=0){
+function displayNewRandomStake(display, num=0){
     display.text(generateStake(num))
 }
 
@@ -97,7 +114,7 @@ function generateSeed(){
 }
 
 function generateDeck(num){
-    let possibleDecks = ["Red Deck", "Blue Deck","Yellow Deck","Green Deck","Black Deck","Magic Deck","Nebula Deck","Ghost Deck","Abandoned Deck","Checkered Deck","Zodiac Deck","Painted Deck","Anaglyph Deck","Plasma Deck","Erratic Deck","Challenge Deck"]
+    let possibleDecks = ["Red Deck", "Blue Deck","Yellow Deck","Green Deck","Black Deck","Magic Deck","Nebula Deck","Ghost Deck","Abandoned Deck","Checkered Deck","Zodiac Deck","Painted Deck","Anaglyph Deck","Plasma Deck","Erratic Deck"]
     return possibleDecks[genRandom(num)]
 
 }
