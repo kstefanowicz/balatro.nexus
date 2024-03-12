@@ -30,9 +30,9 @@
         <header class="container text-center">
             <h1>Balatro Nexus</h1>
         </header>
-        <div class="container" id="versus-container">
-            <h2>Heads-up Balatro</h2>
-            <div class="ruleset container">
+        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#versus-container" ><h2>Heads-up Balatro</h2></button>
+        <div class="container collapse show card card-body bg-secondary" id="versus-container">
+            <div class="ruleset">
                 <p>Prove your superior jokering skills by 1v1'ing your opponent!</p>
                 <p>
                     Both players play using the same seed, deck, and stake; it's recommended to use a profile with
@@ -47,7 +47,7 @@
                 <h3>Seed</h3>
                 <div class="seed-container container">
                     <div class="row">
-                        <div class="col-sm-2 bg-display border border-radius rounded w-auto" id="seed-display"></div>
+                        <div class="col-sm-2 bg-display border border-radius rounded w-auto seed-copy" id="seed-display"></div>
                         <button class="col-sm-1 btn btn-primary ml-20px text-jusitfy w-auto" id="seed-button">Reseed</button>
                     </div>
                 </div>
@@ -97,10 +97,25 @@
 
 
         </div>
-        <div class="container" id="seedbank-container">
-            <h2>Seed Bank</h2>
-            
-        </div>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#seedbank-container" ><h2>Seed Bank</h2></button>
+        <div class="container collapse card card-body bg-secondary my-2" id="seedbank-container">
+            <p>A collection of <em>Power Seeds</em> - Balatro seeds with particularly strong starts.</p>
+            <table class="table table-dark table-hover w-auto">
+                <thead>
+                    <tr>
+                        <th>Seed</th>
+                        <th>Description</th>
+                        <th>Discoverer</th>
+                    </tr>
+                <tbody>
+                    <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">AJPU86Z2</button></td><td>Poly Card Sharp Start</td><td>KStep</td></tr>
+                    <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">BR5RSD3D</button></td><td>Midas + Vampire early</td><td>OK</td></tr>
+                    <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">D38IYHIA</button></td><td>Max econ + double legendary joker start</td><td>x2</td></tr>
+                <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">7LB2WVPK</button></td><td>Walkie Talkie Search, turned into flush five</td><td>Aksu</td></tr>
+                <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">IK74Y8DL</button></td><td>OP FIRST SHOP TRIBOULET</td><td>Spar10</td></tr>
+                </tbody>
+            </table>
+            </div>
     </div>
 
     <footer class="container text-center fixed-bottom">

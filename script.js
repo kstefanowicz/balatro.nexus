@@ -26,10 +26,36 @@ $(document).ready(function () {
     newStake($stakeDisplay)
 
 
+    let $seedCopies = $('.seed-copy');
+    $seedCopies.each(function () {
+        $(this).attr({
+            'data-bs-toggle': 'tooltip',
+            'data-bs-placement': 'left',
+            'data-bs-title': 'Click to copy!'
+        })
+        $(this).tooltip()
 
+        $(this).on('click', function () {
+            toClipboard($(this).text())
+            
+            $(this).tooltip('hide')
+            $(this).attr('data-bs-title', 'Copied!').tooltip('dispose').tooltip();
+            $(this).tooltip('show')
+        })
+
+        $(this).on('mouseleave', function () {
+            $(this).tooltip('hide')
+            $(this).attr('data-bs-title', 'Click to copy!').tooltip('dispose').tooltip();
+        })
+    })
 
 
 })
+
+function toClipboard(text){
+    navigator.clipboard.writeText(text)
+
+}
 
 function newSeed(display){
     display.text(generateSeed())

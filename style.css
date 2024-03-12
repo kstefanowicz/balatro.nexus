@@ -12,6 +12,9 @@ body {
     font-size: 18px;
     background-image: url('src/img/background-static.png');
     color: white;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    border-radius: 3em
 }
 
 
