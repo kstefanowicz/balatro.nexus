@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+
 
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,90 +26,113 @@
 </head>
 
 <body>
-    <div class="container" id="content-root">
+    <div class="container" id="content-root crt">
         <header class="container text-center">
             <h1>Balatro Nexus</h1>
         </header>
-        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#versus-container" ><h2>Heads-up Balatro</h2></button>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#versus-container">
+            <h2>Heads-up Balatro</h2>
+        </button>
         <div class="container collapse show card card-body bg-secondary" id="versus-container">
-            <div class="ruleset">
-                <p>Prove your superior jokering skills by 1v1'ing your opponent!</p>
-                <p>
-                    Both players play using the same seed, deck, and stake; it's recommended to use a profile with
-                    everything unlocked.
-                    The winner is the player who finishes their run with the <em>highest Ante</em>, with tiebreakers
-                    being
-                    decided by the <em>highest Best Hand</em>.
-                </p>
-            </div>
             <div class="row d-flex flex-row">
-                <div class="seed-gen col">
-                    <h3>Seed</h3>
-                    <div class="seed-container container">
-                        <div class="row">
-                            <div class="col-sm-2 bg-display border border-radius rounded w-auto seed-copy" id="seed-display"></div>
-                            <button class="col-sm-1 btn btn-primary ml-20px text-jusitfy w-auto" id="seed-button">Reseed</button>
+                <div class="ruleset col-4">
+                    <p>Prove your superior jokering skills by 1v1'ing your opponent!</p>
+                    <p>
+                        Both players play using the same seed, deck, and stake; it's recommended to use a profile with
+                        everything unlocked.
+                        The winner is the player who finishes their run with the <strong>highest Ante</strong>, with tiebreakers
+                        being
+                        decided by the <strong>highest Best Hand</strong>.
+                    </p>
+                </div>
+                <div class="seed-deck-stake-container col">
+                    <div class="seed-gen col">
+                        <h3>Seed</h3>
+                        <div class="seed-container container">
+                            <div class="col-sm-2 bg-display border border-radius rounded w-auto seed-copy" id="seed-display">
+                            </div>
+                            <button class="col-sm-1 btn btn-primary ml-20px text-jusitfy w-auto"
+                                id="seed-button">Reseed</button>
                         </div>
                     </div>
-                </div>
-                <div class="deck-container col">
                     <h3>Deck</h3>
                     <div class="deck-display container">
                         <div class="row">
-                            <div class="col">
+                            <div class="col w-auto">
                                 <img src="#" id="deck-image">
                             </div>
-                        
-                        <div class="col">
-                            <div class="container deckSidePanel">
-                                <div class="row justify-content">
+        
+                            
+                                <div class="col justify-content">
                                     <div class="col bg-display border border-radius rounded w-auto h-auto text-center"
                                         id="deck-display"></div>
-                                </div>       
+                               
                                 <div class="dropdown row w-auto">
-                                    <button class="btn btn-primary col dropdown-toggle w-auto" type="button" id="deck-dropdown"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Deck</button>
+                                    <button class="btn btn-primary col dropdown-toggle w-auto" type="button" id="deck-dropdown" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Select Deck</button>
                                     <div class="dropdown-menu row" aria-labelledby="deck-dropdown">
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Red_Deck.png" height="16px" width="10px" alt="">Red Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Blue_Deck.png" height="16px" width="10px" alt="">Blue Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Yellow_Deck.png" height="16px" width="10px" alt="">Yellow Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Green_Deck.png" height="16px" width="10px" alt="">Green Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Black_Deck.png" height="16px" width="10px" alt="">Black Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Magic_Deck.png" height="16px" width="10px" alt="">Magic Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Nebula_Deck.png" height="16px" width="10px" alt="">Nebula Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Ghost_Deck.png" height="16px" width="10px" alt="">Ghost Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Abandoned_Deck.png" height="16px" width="10px" alt="">Abandoned Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Checkered_Deck.png" height="16px" width="10px" alt="">Checkered Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Zodiac_Deck.png" height="16px" width="10px" alt="">Zodiac Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Painted_Deck.png" height="16px" width="10px" alt="">Painted Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Anaglyph_Deck.png" height="16px" width="10px" alt="">Anaglyph Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Plasma_Deck.png" height="16px" width="10px" alt="">Plasma Deck</a>
-                                    <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Erratic_Deck.png" height="16px" width="10px" alt="">Erratic Deck</a>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Red_Deck.png"
+                                                height="16px" width="10px" alt="">Red Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Blue_Deck.png"
+                                                height="16px" width="10px" alt="">Blue Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Yellow_Deck.png" height="16px" width="10px" alt="">Yellow Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Green_Deck.png" height="16px" width="10px" alt="">Green Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Black_Deck.png" height="16px" width="10px" alt="">Black Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Magic_Deck.png" height="16px" width="10px" alt="">Magic Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Nebula_Deck.png" height="16px" width="10px" alt="">Nebula Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Ghost_Deck.png" height="16px" width="10px" alt="">Ghost Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Abandoned_Deck.png" height="16px" width="10px" alt="">Abandoned Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Checkered_Deck.png" height="16px" width="10px" alt="">Checkered Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Zodiac_Deck.png" height="16px" width="10px" alt="">Zodiac Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Painted_Deck.png" height="16px" width="10px" alt="">Painted Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Anaglyph_Deck.png" height="16px" width="10px" alt="">Anaglyph Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Plasma_Deck.png" height="16px" width="10px" alt="">Plasma Deck</a></button>
+                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
+                                                src="src/img/decks/Erratic_Deck.png" height="16px" width="10px" alt="">Erratic Deck</a></button>
+        
+                                    </div>
+                                    <div class="row">
+                                        <button class="" btn btn-danger col text-jusitfy h-auto w-auto"
+                                            id="deck-button">Randomize Deck</button>
+                                    </div>
                                 </div>
-                                <div class="row">
-                                    <button class="" btn btn-danger col text-jusitfy h-auto w-auto" id="deck-button">Randomize Deck</button>
                                 </div>
+                            
+                        </div>
+                    </div>
+                    <div class="stake-gen">
+                        <h3>Stake</h3>
+                        <div class="stake-display container">
+                            <div class="row">
+                                <div class="col bg-display border border-radius rounded w-auto" id="stake-display">
+                                </div>
+                                <button class="col btn btn-primary text-jusitfy w-auto" id="stake-button">Randomize
+                                    Stake</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            <div class="stake-gen col">
-                <h3>Stake</h3>
-                <div class="stake-display container">
-                    <div class="row">
-                        <div class="col bg-display border border-radius rounded w-auto" id="stake-display"></div>
-                        <button class="col btn btn-primary text-jusitfy w-auto" id="stake-button">Randomize
-                            Stake</button>
-                    </div>
-                </div>
             </div>
+        
         </div>
-
-
-        </div>
-        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#seedbank-container" ><h2>Seed Bank</h2></button>
+        
+        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"data-bs-target="#seedbank-container">
+            <h2>Seed Bank</h2>
+        </button>
         <div class="container collapse show card card-body bg-secondary" id="seedbank-container">
-            <p>A collection of <em>Power Seeds</em> - Balatro seeds with particularly strong starts.</p>
+            <p>A collection of <strong>Power Seeds</strong> - Balatro seeds with particularly strong starts.</p>
             <table class="table table-dark table-hover w-auto">
                 <thead>
                     <tr>
@@ -118,29 +141,55 @@
                         <th>Discoverer</th>
                     </tr>
                 <tbody>
-                    <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">AJPU86Z2</button></td><td>Poly Card Sharp Start</td><td>KStep</td></tr>
-                    <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">BR5RSD3D</button></td><td>Midas + Vampire early</td><td>OK</td></tr>
-                    <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">D38IYHIA</button></td><td>Max econ + double legendary joker start</td><td>x2</td></tr>
-                <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">7LB2WVPK</button></td><td>Walkie Talkie Search, turned into flush five</td><td>Aksu</td></tr>
-                <tr><td class="seed-copy w-auto"><button class = "btn btn-secondary" type="button">IK74Y8DL</button></td><td>OP FIRST SHOP TRIBOULET</td><td>Spar10</td></tr>
+                    <tr>
+                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
+                                type="button">AJPU86Z2</button></td>
+                        <td>Poly Card Sharp Start</td>
+                        <td>KStep</td>
+                    </tr>
+                    <tr>
+                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
+                                type="button">BR5RSD3D</button></td>
+                        <td>Midas + Vampire early</td>
+                        <td>OK</td>
+                    </tr>
+                    <tr>
+                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
+                                type="button">D38IYHIA</button></td>
+                        <td>Max econ + double legendary joker start</td>
+                        <td>x2</td>
+                    </tr>
+                    <tr>
+                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
+                                type="button">7LB2WVPK</button></td>
+                        <td>Walkie Talkie Search, turned into flush five</td>
+                        <td>Aksu</td>
+                    </tr>
+                    <tr>
+                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
+                                type="button">IK74Y8DL</button></td>
+                        <td>OP FIRST SHOP TRIBOULET</td>
+                        <td>Spar10</td>
+                    </tr>
                 </tbody>
             </table>
-            </div>
+        </div>
+    </div>
     </div>
 
     <footer class="container text-center fixed-bottom">
         <h6>balatro.nexus is not affiliated with Balatro, LocalThunk, or Playstack</h6>
         <h6>Font by <a href="https://managore.itch.io/">Daniel Linssen</a></h6>
     </footer>
-    </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-        crossorigin="anonymous"></script>
-        
-    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<script src="script.js"></script>
 </body>
 
 </html>

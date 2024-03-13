@@ -3,9 +3,6 @@
     src: url(src/font/m6x11-BV674e_g.ttf);
 }
 
-html {
-    
-}
 
 body {
     font-family: 'm6x11', sans-serif;
@@ -23,8 +20,10 @@ body {
 }
 
 
+
 #content-root {
-    background-color: rgba(128, 128, 128, 0.7);
+    background-color: rgba(128, 128, 128, 1);
+    z-index: 2;
 }
 
 h1 {
@@ -32,9 +31,6 @@ h1 {
     font-size: 100px
 }
 
-em {
-    font-weight: bold;
-}
 
 .bg-display {
     background-color: rgb(122, 122, 122);
@@ -61,7 +57,4 @@ em {
     font-weight: bold;
     font-size: 32px;
     color: white
-}
-
-footer {
 }
