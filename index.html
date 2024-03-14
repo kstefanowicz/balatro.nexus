@@ -30,10 +30,22 @@
         <header class="container text-center">
             <h1>Balatro Nexus</h1>
         </header>
-        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#versus-container">
-            <h2>Heads-up Balatro</h2>
-        </button>
-        <div class="container collapse show card card-body bg-secondary" id="versus-container">
+        <ul class="nav nav-tabs bg-secondary" role="tablist" id="tab-bar-custom">
+           <li class="nav-item custom-nav-item" role="presentation"> 
+                <button class="nav-link active" type="button" id="versus-tab" role="tab" data-bs-toggle="tab" data-bs-target="#versus-container">
+                    <h2>Heads-up Balatro</h2>
+                </button>
+            </li>
+            
+            <li class="nav-item custom-nav-item" role="presentation">
+                    <button class="nav-link" type="button" id="seed-tab" role="tab" data-bs-toggle="tab" data-bs-target="#seedbank-container">
+                        <h2>Seed Bank</h2>
+                    </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="activeTab">
+        <div class="container tab-pane show active fade bg-secondary" role="tabpanel" id="versus-container" aria-labelledby="versus-tab">
             <div class="row d-flex flex-row">
                 <div class="ruleset col-4">
                     <p>Prove your superior jokering skills by 1v1'ing your opponent!</p>
@@ -48,10 +60,10 @@
                 <div class="seed-deck-stake-container col">
                     <div class="seed-gen col">
                         <h3>Seed</h3>
-                        <div class="seed-container container">
-                            <div class="col-sm-2 bg-display border border-radius rounded w-auto seed-copy" id="seed-display">
+                        <div class="seed-container row justify-content">
+                            <div class="col-sm-2 bg-display border border-radius rounded w-auto seed-copy text-justify" id="seed-display">
                             </div>
-                            <button class="col-sm-1 btn btn-primary ml-20px text-jusitfy w-auto"
+                            <button class="col-sm-1 btn btn-primary mx-2 text-justify w-auto"
                                 id="seed-button">Reseed</button>
                         </div>
                     </div>
@@ -68,43 +80,12 @@
                                         id="deck-display"></div>
                                
                                 <div class="dropdown row w-auto">
-                                    <button class="btn btn-primary col dropdown-toggle w-auto" type="button" id="deck-dropdown" data-bs-toggle="dropdown"
+                                    <button class="btn btn-primary col dropdown-toggle w-2" type="button" id="deck-dropdown" data-bs-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">Select Deck</button>
-                                    <div class="dropdown-menu row" aria-labelledby="deck-dropdown">
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Red_Deck.png"
-                                                height="16px" width="10px" alt="">Red Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/Blue_Deck.png"
-                                                height="16px" width="10px" alt="">Blue Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Yellow_Deck.png" height="16px" width="10px" alt="">Yellow Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Green_Deck.png" height="16px" width="10px" alt="">Green Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Black_Deck.png" height="16px" width="10px" alt="">Black Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Magic_Deck.png" height="16px" width="10px" alt="">Magic Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Nebula_Deck.png" height="16px" width="10px" alt="">Nebula Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Ghost_Deck.png" height="16px" width="10px" alt="">Ghost Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Abandoned_Deck.png" height="16px" width="10px" alt="">Abandoned Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Checkered_Deck.png" height="16px" width="10px" alt="">Checkered Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Zodiac_Deck.png" height="16px" width="10px" alt="">Zodiac Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Painted_Deck.png" height="16px" width="10px" alt="">Painted Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Anaglyph_Deck.png" height="16px" width="10px" alt="">Anaglyph Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Plasma_Deck.png" height="16px" width="10px" alt="">Plasma Deck</a></button>
-                                        <button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class
-                                                src="src/img/decks/Erratic_Deck.png" height="16px" width="10px" alt="">Erratic Deck</a></button>
-        
+                                    <div class="dropdown-menu row" id="deck-dropdown-root" aria-labelledby="deck-dropdown" >
                                     </div>
                                     <div class="row">
-                                        <button class="" btn btn-danger col text-jusitfy h-auto w-auto"
+                                        <button class="btn btn-danger col text-justify ml-2 h-auto"
                                             id="deck-button">Randomize Deck</button>
                                     </div>
                                 </div>
@@ -116,9 +97,16 @@
                         <h3>Stake</h3>
                         <div class="stake-display container">
                             <div class="row">
+                                <div class="col w-auto">
+                                    <img src="#" id="stake-image">
+                                </div>
                                 <div class="col bg-display border border-radius rounded w-auto" id="stake-display">
                                 </div>
-                                <button class="col btn btn-primary text-jusitfy w-auto" id="stake-button">Randomize
+                                <button class="btn btn-primary col dropdown-toggle w-2" type="button" id="stake-dropdown" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Select Stake</button>
+                                        <div class="dropdown-menu row" id="stake-dropdown-root" aria-labelledby="stake-dropdown">
+                                        </div>
+                                <button class="col btn btn-danger text-justify w-auto" id="stake-button">Randomize
                                     Stake</button>
                             </div>
                         </div>
@@ -126,58 +114,27 @@
                 </div>
             </div>
         
-        </div>
+        </div>   
         
-        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"data-bs-target="#seedbank-container">
-            <h2>Seed Bank</h2>
-        </button>
-        <div class="container collapse show card card-body bg-secondary" id="seedbank-container">
+        <div class="container tab-pane fade bg-secondary" role="tabpanel" id="seedbank-container" aria-labelledby="seed-tab">
             <p>A collection of <strong>Power Seeds</strong> - Balatro seeds with particularly strong starts.</p>
-            <table class="table table-dark table-hover w-auto">
-                <thead>
-                    <tr>
-                        <th>Seed</th>
-                        <th>Description</th>
-                        <th>Discoverer</th>
-                    </tr>
-                <tbody>
-                    <tr>
-                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
-                                type="button">AJPU86Z2</button></td>
-                        <td>Poly Card Sharp Start</td>
-                        <td>KStep</td>
-                    </tr>
-                    <tr>
-                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
-                                type="button">BR5RSD3D</button></td>
-                        <td>Midas + Vampire early</td>
-                        <td>OK</td>
-                    </tr>
-                    <tr>
-                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
-                                type="button">D38IYHIA</button></td>
-                        <td>Max econ + double legendary joker start</td>
-                        <td>x2</td>
-                    </tr>
-                    <tr>
-                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
-                                type="button">7LB2WVPK</button></td>
-                        <td>Walkie Talkie Search, turned into flush five</td>
-                        <td>Aksu</td>
-                    </tr>
-                    <tr>
-                        <td class="seed-copy w-auto"><button class="btn btn-secondary"
-                                type="button">IK74Y8DL</button></td>
-                        <td>OP FIRST SHOP TRIBOULET</td>
-                        <td>Spar10</td>
-                    </tr>
-                </tbody>
-            </table>
+                <table class="table table-dark table-hover w-auto">
+                    <thead>
+                        <tr>
+                            <th>Seed</th>
+                            <th>Description</th>
+                            <th>Discoverer</th>
+                        </tr>
+                    <tbody id="table-root">
+                    </tbody>
+                </table>
         </div>
-    </div>
+        </div>
     </div>
 
-    <footer class="container text-center fixed-bottom">
+
+    
+    <footer class="text-center fixed-bottom">
         <h6>balatro.nexus is not affiliated with Balatro, LocalThunk, or Playstack</h6>
         <h6> <a href="mailto:contact@balatro.nexus">Contact</a> | Font by <a href="https://managore.itch.io/">Daniel Linssen</a></h6>
     </footer>

@@ -10,6 +10,7 @@ $(document).ready(function () {
     let $stakeButton  = $('#stake-button')
     
     let $deckImageDisplay = $('#deck-image')
+    let $stakeImageDisplay = $('#stake-image')
 
 
     $seedButton.on('click', function(){
@@ -23,11 +24,23 @@ $(document).ready(function () {
     displayNewRandomDeck($deckDisplay,$deckImageDisplay)
 
     $stakeButton.on('click', function(){
-        displayNewRandomStake($stakeDisplay, 7)
+        displayNewRandomStake($stakeDisplay, $stakeImageDisplay, 7)
     })
-    displayNewRandomStake($stakeDisplay)
+    displayNewRandomStake($stakeDisplay, $stakeImageDisplay)
 
 
+    // Create power seed table
+    let $testTable = $('#table-root')
+    let testSeeds = []
+    testSeeds.push(new PowerSeed('AJPU86Z2', 'Poly Card Sharp Start', 'KStep'))
+    testSeeds.push(new PowerSeed('BR5RSD3D', 'Midas + Vampire early', 'OK'))
+    testSeeds.push(new PowerSeed('D38IYHIA', 'Max econ + double legendary joker start', 'x2'))
+    testSeeds.push(new PowerSeed('7LB2WVPK', 'Walkie Talkie Search, turned into flush five', 'Aksu'))
+    testSeeds.push(new PowerSeed('IK74Y8DL', 'OP FIRST SHOP TRIBOULET', 'Spar10'))
+    testSeeds.push(new PowerSeed('11A8CHK2', 'Blueprint + Perkeo + Poly Red Seal King', 'Ugleh'))
+    buildPowerSeedTable(testSeeds, $testTable)
+
+    // Add "Click to copy!" tooltip to seeds
     let $seedCopies = $('.seed-copy');
     $seedCopies.each(function () {
         $(this).attr({
@@ -51,11 +64,58 @@ $(document).ready(function () {
         })
     })
 
+    // Build Deck dropdown
+    $selectDeck = $('#deck-dropdown-root')
+
+    allDecks = []
+    allDecks.push(new DropdownOption('Red Deck', 'Red_Deck.png'))
+    allDecks.push(new DropdownOption('Blue Deck', 'Blue_Deck.png'))
+    allDecks.push(new DropdownOption('Yellow Deck', 'Yellow_Deck.png'))
+    allDecks.push(new DropdownOption('Green Deck', 'Green_Deck.png'))
+    allDecks.push(new DropdownOption('Black Deck', 'Black_Deck.png'))
+    allDecks.push(new DropdownOption('Magic Deck', 'Magic_Deck.png'))
+    allDecks.push(new DropdownOption('Nebula Deck', 'Nebula_Deck.png'))
+    allDecks.push(new DropdownOption('Ghost Deck', 'Ghost_Deck.png'))
+    allDecks.push(new DropdownOption('Abandoned Deck', 'Abandoned_Deck.png'))
+    allDecks.push(new DropdownOption('Checkered Deck', 'Checkered_Deck.png'))
+    allDecks.push(new DropdownOption('Zodiac Deck', 'Zodiac_Deck.png'))
+    allDecks.push(new DropdownOption('Painted Deck', 'Painted_Deck.png'))
+    allDecks.push(new DropdownOption('Anaglyph Deck', 'Anaglyph_Deck.png'))
+    allDecks.push(new DropdownOption('Plasma Deck', 'Plasma_Deck.png'))
+    allDecks.push(new DropdownOption('Erratic Deck', 'Erratic_Deck.png'))
+    
+    buildDeckDropDown(allDecks, $selectDeck)
+
+    // Set up Select Deck dropdown functionality
     let $deckSelections = $('.deck-selection')
+    $
     $deckSelections.on('click',function(){
         $deckDisplay.text($(this).text())
         $deckImageDisplay.attr('src',`src/img/decks/${toImgFileName($(this).text())}`)
     })
+
+    $selectStake = $('#stake-dropdown-root')
+
+    allStakes = []
+    allStakes.push(new DropdownOption('White Stake', 'White_Stake.png'))
+    allStakes.push(new DropdownOption('Red Stake', 'Red_Stake.png'))
+    allStakes.push(new DropdownOption('Green Stake', 'Green_Stake.png'))
+    allStakes.push(new DropdownOption('Black Stake', 'Black_Stake.png'))
+    allStakes.push(new DropdownOption('Blue Stake', 'Blue_Stake.png'))
+    allStakes.push(new DropdownOption('Purple Stake', 'Purple_Stake.png'))
+    allStakes.push(new DropdownOption('Orange Stake', 'Orange_Stake.png'))
+    allStakes.push(new DropdownOption('Gold Stake', 'Gold_Stake.png'))
+
+    buildStakeDropDown(allStakes, $selectStake)
+
+    let $stakeSelections = $('.stake-selection')
+    $
+    $stakeSelections.on('click',function(){
+        $stakeDisplay.text($(this).text())
+        $stakeImageDisplay.attr('src',`src/img/stakes/${toImgFileName($(this).text())}`)
+    })
+
+
 
 
 })
@@ -72,23 +132,27 @@ function toImgFileName(deckName){
     return outName.replace(/ /g,'').replace('\n','')
 }
 
+//#region Randomize and update displays
+
 function displayNewRandomSeed(display){
     display.text(generateSeed())
 }
 
 function displayNewRandomDeck(displayText, displayImg, num=5){
-    selection = generateDeck(num)
+    let selection = generateDeck(num)
     displayText.text(selection)
     displayImg.attr('src',`src/img/decks/${toImgFileName(selection)}`)
 }
 
-function displayNewRandomStake(display, num=0){
-    display.text(generateStake(num))
+function displayNewRandomStake(display, displayImg, num=0){
+    let selection = generateStake(num)
+    display.text(selection)
+    displayImg.attr('src',`src/img/stakes/${toImgFileName(selection)}`)
 }
 
 function generateSeed(){
     // Method to get array of all possible seeds 
-    // Generated via Higgs, AI tool from covalence.io
+    // #region Generated via Higgs, AI tool from covalence.io
     
     // Generate all uppercase letters (A-Z)
     const letters = Array.from({ length: 26 }, (_, i) => String.fromCharCode(i + 65));
@@ -120,7 +184,7 @@ function generateDeck(num){
 }
 
 function generateStake(num){
-    let possibleStakes = ["White Stake","Red Stake","Green Stake","Black Stake","Blue Stake,","Purple Stake","Orange Stake","Gold Stake"]
+    let possibleStakes = ["White Stake","Red Stake","Green Stake","Black Stake","Blue Stake","Purple Stake","Orange Stake","Gold Stake"]
     return possibleStakes[genRandom(num)]
 }
 
@@ -128,4 +192,43 @@ function generateStake(num){
 function genRandom(max){
     return (Math.floor(Math.random()*max))
 
+}
+
+//#endregion
+
+class DropdownOption {
+    constructor(deckName, fileName){
+        this.name = deckName
+        this.fileName = fileName
+    }
+}
+function buildDeckDropDown(deckList, $deckDropdown){
+    deckList.forEach(deck => {
+        $deckDropdown.append(`<button class="deck-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/decks/${deck.fileName}"
+        height="16px" width="10px" alt="">${deck.name}</a></button>`)
+    })
+}
+
+function buildStakeDropDown(stakeList, $stakeDropdown) {
+    console.log("BUILDING STAKES")
+    stakeList.forEach(stake => {
+        $stakeDropdown.append(`<button class="stake-selection btn btn-secondary dropdown-item" href="#"><img class src="src/img/stakes/${stake.fileName}"
+        height="16px" width="10px" alt="">${stake.name}</a></button>`)
+    })
+}
+
+
+class PowerSeed {
+    constructor(seed, description, discoverer) {
+        this.seed = seed
+        this.description = description
+        this.discoverer = discoverer
+    }
+}
+
+function buildPowerSeedTable(powerSeeds, $tableRoot){
+    powerSeeds.forEach(seed => {
+        $tableRoot.append(`<tr><td class="seed-copy w-auto"><button class="btn btn-secondary" type="button">${seed.seed}</button></td><td>${seed.description}</td><td>${seed.discoverer}</td></tr>`)
+
+    })
 }

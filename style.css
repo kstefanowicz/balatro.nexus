@@ -19,7 +19,13 @@ body {
     width: 160px
 }
 
+#deck-dropdown-root img {
+    margin-right: .5em;
+}
 
+.fade {
+    transition-duration: 100ms;
+}
 
 #content-root {
     background-color: rgba(128, 128, 128, 1);
@@ -30,6 +36,7 @@ h1 {
     font-family: 'Righteous', sans-serif;
     font-size: 100px
 }
+
 
 
 .bg-display {
@@ -45,6 +52,13 @@ h1 {
     
 }
 
+#tab-bar-custom{
+    margin: 1em 1em;
+    padding: .5em;
+    border-radius: .5em
+}
+
+
 #deck-display {
     font-family: 'm6x11', sans-serif;
     font-weight: bold;
@@ -57,4 +71,15 @@ h1 {
     font-weight: bold;
     font-size: 32px;
     color: white
+}
+
+footer {
+    background-color: rgba(128, 128, 128, 0.596);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: fit-content;
+    margin: 0 auto;
+    padding-top:.5em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
