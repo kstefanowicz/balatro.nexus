@@ -27,6 +27,9 @@ body {
     margin-right: .5em;
 }
 
+#stake-dropdown-root img {
+    margin-right: .5em;
+}
 .fade {
     transition-duration: 100ms;
 }

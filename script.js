@@ -30,15 +30,20 @@ $(document).ready(function () {
 
 
     // Create power seed table
-    let $testTable = $('#table-root')
-    let testSeeds = []
-    testSeeds.push(new PowerSeed('AJPU86Z2', 'Poly Card Sharp Start', 'KStep'))
-    testSeeds.push(new PowerSeed('BR5RSD3D', 'Midas + Vampire early', 'OK'))
-    testSeeds.push(new PowerSeed('D38IYHIA', 'Max econ + double legendary joker start', 'x2'))
-    testSeeds.push(new PowerSeed('7LB2WVPK', 'Walkie Talkie Search, turned into flush five', 'Aksu'))
-    testSeeds.push(new PowerSeed('IK74Y8DL', 'OP FIRST SHOP TRIBOULET', 'Spar10'))
-    testSeeds.push(new PowerSeed('11A8CHK2', 'Blueprint + Perkeo + Poly Red Seal King', 'Ugleh'))
-    buildPowerSeedTable(testSeeds, $testTable)
+    let $seedsTable = $('#power-seed-table-root')
+    let seedList = []
+    seedList.push(new PowerSeed('AJPU86Z2', 'Poly Card Sharp Start', 'KStep'))
+    seedList.push(new PowerSeed('BR5RSD3D', 'Midas + Vampire early', 'OK'))
+    seedList.push(new PowerSeed('D38IYHIA', 'Max econ + double legendary joker start', 'x2'))
+    seedList.push(new PowerSeed('7LB2WVPK', 'Walkie Talkie Search, turned into flush five', 'Aksu'))
+    seedList.push(new PowerSeed('IK74Y8DL', 'OP FIRST SHOP TRIBOULET', 'Spar10'))
+    seedList.push(new PowerSeed('11A8CHK2', 'Blueprint + Perkeo + Poly Red Seal King', 'Ugleh'))
+    seedList.push(new PowerSeed('XAHT63SS', 'Negative Hack and Perkeo', 'BlueMtWolf'))
+    seedList.push(new PowerSeed('9HR5LSPJ', 'Double Ancient + BS', 'HuyTheKiller'))
+    seedList.push(new PowerSeed('D3XS42TK', 'fucking shenanigans', 'muuyo'))
+    seedList.push(new PowerSeed('2YAFMNVB', 'Perkeo + red seal steel kings','RadioInactive'))
+
+    buildPowerSeedTable(seedList, $seedsTable)
 
     // Add "Click to copy!" tooltip to seeds
     let $seedCopies = $('.seed-copy');
@@ -228,6 +233,7 @@ class PowerSeed {
 
 function buildPowerSeedTable(powerSeeds, $tableRoot){
     powerSeeds.forEach(seed => {
+        console.log('Append')
         $tableRoot.append(`<tr><td class="seed-copy w-auto"><button class="btn btn-secondary" type="button">${seed.seed}</button></td><td>${seed.description}</td><td>${seed.discoverer}</td></tr>`)
 
     })
