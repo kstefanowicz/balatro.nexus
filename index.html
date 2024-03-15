@@ -26,98 +26,91 @@
 </head>
 
 <body>
-    <div class="container" id="content-root crt">
-        <header class="container text-center">
+    <div class="" id="content-root crt">
+        <header class="text-center">
             <h1>Balatro Nexus</h1>
         </header>
-        <ul class="nav nav-tabs bg-secondary" role="tablist" id="tab-bar-custom">
-           <li class="nav-item custom-nav-item" role="presentation"> 
-                <button class="nav-link active" type="button" id="versus-tab" role="tab" data-bs-toggle="tab" data-bs-target="#versus-container">
-                    <h2>Heads-up Balatro</h2>
-                </button>
-            </li>
-            
-            <li class="nav-item custom-nav-item" role="presentation">
-                    <button class="nav-link" type="button" id="seed-tab" role="tab" data-bs-toggle="tab" data-bs-target="#seedbank-container">
+        <div class="d-flex justify-content-center w-auto">
+            <ul class="nav nav-tabs bg-secondary" role="tablist" id="tab-bar-custom">
+                <li class="nav-item custom-nav-item" role="presentation">
+                    <button class="nav-link active" type="button" id="seed-tab" role="tab" data-bs-toggle="tab"
+                        data-bs-target="#seedbank-container">
                         <h2>Seed Bank</h2>
                     </button>
-            </li>
-        </ul>
+                </li>
+                <li class="nav-item custom-nav-item" role="presentation">
+                    <button class="nav-link" type="button" id="versus-tab" role="tab" data-bs-toggle="tab"
+                        data-bs-target="#versus-container">
+                        <h2>Heads-up Balatro</h2>
+                    </button>
+                </li>
 
-        <div class="tab-content" id="activeTab">
-        <div class="container tab-pane show active fade bg-secondary" role="tabpanel" id="versus-container" aria-labelledby="versus-tab">
-            <div class="row d-flex flex-row">
-                <div class="ruleset col-4">
-                    <p>Prove your superior jokering skills by 1v1'ing your opponent!</p>
-                    <p>
-                        Both players play using the same seed, deck, and stake; it's recommended to use a profile with
-                        everything unlocked.
-                        The winner is the player who finishes their run with the <strong>highest Ante</strong>, with tiebreakers
-                        being
-                        decided by the <strong>highest Best Hand</strong>.
-                    </p>
-                </div>
-                <div class="seed-deck-stake-container col">
-                    <div class="seed-gen col">
-                        <h3>Seed</h3>
-                        <div class="seed-container row justify-content">
-                            <div class="col-sm-2 bg-display border border-radius rounded w-auto seed-copy text-justify" id="seed-display">
-                            </div>
-                            <button class="col-sm-1 btn btn-primary mx-2 text-justify w-auto"
-                                id="seed-button">Reseed</button>
-                        </div>
+            </ul>
+        </div>
+
+        <div class="tab-content m-2 p-1 rounded-4 bg-secondary" id="active-tab"
+            <div class="tab-pane fade" role="tabpanel" id="versus-container"
+                aria-labelledby="versus-tab">
+                <div class="row d-flex flex-row">
+                    <div class="ruleset border-3 border-end border-dark col-4">
+                        <p>Prove your superior jokering skills by 1v1'ing your opponent!</p>
+                        <p>Both players play using the same seed, deck, and stake; it's recommended to use a profile with everything unlocked. 
+                            The winner is the player who finishes their run with the <strong>highest Ante</strong>, with tiebreakers being decided 
+                            by the <strong>highest Best Hand</strong>.
+                        </p>
                     </div>
-                    <h3>Deck</h3>
-                    <div class="deck-display container">
-                        <div class="row">
-                            <div class="col w-auto">
+                    <div class="seed-deck-stake-container m-2 col">
+                        <div class="seed-gen">
+                            <h3>Seed</h3>
+                            <div class="seed-container row justify-content-center">
+                                <div class="bg-display rounded w-auto seed-copy text-justify"
+                                    id="seed-display">
+                                </div>
+                                <button class="btn btn-primary mx-2 text-justify w-auto"
+                                    id="seed-button">Reseed</button>
+                            </div>
+                        </div>
+                        <h3>Deck</h3>
+                        <div class="deck-display container d-flex align-items-center">
+                            <div class="col d-flex justify-content-end mx-2 w-auto">
                                 <img src="#" id="deck-image">
                             </div>
-        
-                            
-                                <div class="col justify-content">
-                                    <div class="col bg-display border border-radius rounded w-auto h-auto text-center"
-                                        id="deck-display"></div>
-                               
-                                <div class="dropdown row w-auto">
-                                    <button class="btn btn-primary col dropdown-toggle w-2" type="button" id="deck-dropdown" data-bs-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">Select Deck</button>
-                                    <div class="dropdown-menu row" id="deck-dropdown-root" aria-labelledby="deck-dropdown" >
-                                    </div>
-                                    <div class="row">
-                                        <button class="btn btn-danger col text-justify ml-2 h-auto"
-                                            id="deck-button">Randomize Deck</button>
-                                    </div>
-                                </div>
-                                </div>
-                            
+                            <div class="col d-flex flex-column align-items-start">
+                                <div class="bg-display" id="deck-display"></div>
+                                <button class="btn btn-primary col dropdown-toggle w-2" type="button" id="deck-dropdown"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Deck</button>
+                                <div class="dropdown-menu" id="deck-dropdown-root" aria-labelledby="deck-dropdown"></div>
+                                <button class="btn btn-danger text-justify ml-2 h-auto" id="deck-button">Randomize Deck</button>
+                        
+                            </div>
                         </div>
-                    </div>
-                    <div class="stake-gen">
-                        <h3>Stake</h3>
-                        <div class="stake-display container">
-                            <div class="row">
-                                <div class="col w-auto">
-                                    <img src="#" id="stake-image">
+                        <div class="stake-gen">
+                            <h3>Stake</h3>
+                            <div class="stake-display d-flex justify-content-center">
+                                <div class="row">
+                                    <div class=" w-auto">
+                                        <img src="#" id="stake-image">
+                                    </div>
+                                    <div class=" bg-display rounded w-auto" id="stake-display">
+                                    </div>
+                                    <button class="btn btn-primary w-auto dropdown-toggle" type="button" id="stake-dropdown"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Stake</button>
+                                    <div class="dropdown-menu row" id="stake-dropdown-root" aria-labelledby="stake-dropdown">
+                                    </div>
+                                    <button class=" btn btn-danger text-justify w-auto" id="stake-button">Randomize Stake</button>
                                 </div>
-                                <div class="col bg-display border border-radius rounded w-auto" id="stake-display">
-                                </div>
-                                <button class="btn btn-primary col dropdown-toggle w-2" type="button" id="stake-dropdown" data-bs-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">Select Stake</button>
-                                        <div class="dropdown-menu row" id="stake-dropdown-root" aria-labelledby="stake-dropdown">
-                                        </div>
-                                <button class="col btn btn-danger text-justify w-auto" id="stake-button">Randomize
-                                    Stake</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        
-        </div>   
-        
-        <div class="container tab-pane fade bg-secondary" role="tabpanel" id="seedbank-container" aria-labelledby="seed-tab">
-            <p>A collection of <strong>Power Seeds</strong> - Balatro seeds with particularly strong starts.</p>
+
+
+        <div class="tab-pane show active fade bg-secondary" role="tabpanel" id="seedbank-container" aria-labelledby="seed-tab">
+            <div class="d-flex justify-content-center w-auto justify-content-center">
+                <p class="">A collection of <strong>Power Seeds</strong> - Balatro seeds with particularly strong starts.</p>
+            </div>
+            <div class="d-flex justify-content-center w-auto justify-content-center">
                 <table class="table table-dark table-hover w-auto">
                     <thead>
                         <tr>
@@ -125,28 +118,33 @@
                             <th>Description</th>
                             <th>Discoverer</th>
                         </tr>
+                    </thead>
                     <tbody id="table-root">
                     </tbody>
                 </table>
+            </div>
         </div>
-        </div>
+        
+    </div>
     </div>
 
 
-    
+
     <footer class="text-center fixed-bottom">
         <h6>balatro.nexus is not affiliated with Balatro, LocalThunk, or Playstack</h6>
         <h6> <a href="mailto:contact@balatro.nexus">Contact</a> | Font by <a href="https://managore.itch.io/">Daniel Linssen</a></h6>
     </footer>
-</div>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.js"
-    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-<script src="script.js"></script>
+    <!-- Import Bootstrap JS, jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
