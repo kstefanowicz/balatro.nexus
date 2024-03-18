@@ -42,6 +42,7 @@ $(document).ready(function () {
     seedList.push(new PowerSeed('9HR5LSPJ', 'Double Ancient + BS', 'HuyTheKiller'))
     seedList.push(new PowerSeed('D3XS42TK', 'fucking shenanigans', 'muuyo'))
     seedList.push(new PowerSeed('2YAFMNVB', 'Perkeo + red seal steel kings','RadioInactive'))
+    seedList.push(new PowerSeed('KARQHLYD', 'Shortcut + Crazy Joker Start','KStep'))
 
     buildPowerSeedTable(seedList, $seedsTable)
 
